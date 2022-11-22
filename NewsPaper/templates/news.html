@@ -8,13 +8,30 @@ News
 
 {% block content %}
    <h1>Все новости</h1>
+
+    <form action="" method="get">
+        {{ filterset.form.as_p }}
+        <input type="submit" value="Найти" />
+    </form>
+
    <hr>
+
+    {# Теперь будем проверять не request.user.is_authenticated, а конкретные права #}
+    {% if perms.news.add_post %}
+    <a href="{% url 'post_create' %}">Добавить новость/статью</a>
+    {% endif %}
+
    {% if news %}
        <table>
            <tr>
                <td>Заголовок</td>
                <td>Дата публикации</td>
                <td>Текст</td>
+
+                {# Условие получается составным. #}
+                {% if perms.news.change_post or perms.news.delete_post %}
+                <td>Действия</td>
+                {% endif %}
            </tr>
 
 
@@ -23,6 +40,17 @@ News
                <td>{{ post.title|censor_title }}</td>
                <td>{{ post.dateCreation|date:'d M Y'}}</td>
                <td>{{ post.text|truncatewords:20|censor_text }}</td>
+
+               <td>
+                    {# А здесь доступ для каждой ссылки теперь будем проверять отдельно #}
+                    {% if perms.news.change_post %}
+                    <a href="{% url 'post_update' pk=post.id %}">Изменить</a>
+                    {% endif %}
+                    {% if perms.news.delete_post %}
+                    <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                    {% endif %}
+                </td>
+
            </tr>
            {% endfor %}
 
