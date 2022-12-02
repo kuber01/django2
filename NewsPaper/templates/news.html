@@ -41,6 +41,10 @@ News
                <td>{{ post.dateCreation|date:'d M Y'}}</td>
                <td>{{ post.text|truncatewords:20|censor_text }}</td>
 
+               <td>{% for category in post.postCategory.all %}
+                <a href="{% url 'category_list' category.id %}">{{category}}</a>
+               {% endfor %}</td>
+
                <td>
                     {# А здесь доступ для каждой ссылки теперь будем проверять отдельно #}
                     {% if perms.news.change_post %}
