@@ -11,7 +11,8 @@ from .models import Post, Appointment, Category
 from .filters import PostFilter
 from .forms import PostForm
 from django.views import View
-from django.template.loader import render_to_string  # импортируем функцию, которая срендерит наш html в текст
+from django.template.loader import render_to_string
+from django.http import HttpResponse
 
 
 class PostsList(ListView):
