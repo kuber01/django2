@@ -1,0 +1,53 @@
+INFO Watching for file changes with StatReloader
+INFO "GET /news/ HTTP/1.1" 200 6192
+INFO "GET /news/ HTTP/1.1" 200 6192
+INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET /news/ HTTP/1.1" 200 6192
+INFO "GET /news/ HTTP/1.1" 200 6192
+INFO Watching for file changes with StatReloader
+INFO "GET /news/ HTTP/1.1" 200 6192
+INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading.
+2023-01-10 12:06:59,585 INFO Watching for file changes with StatReloader
+2023-01-10 12:06:59,896 INFO "GET /news/ HTTP/1.1" 200 6192
+2023-01-10 12:07:21,041 INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading.
+INFO Watching for file changes with StatReloader 2023-01-10 12:07:21,865
+INFO "GET /news/ HTTP/1.1" 200 6192 2023-01-10 12:07:22,102
+INFO E:\Python\pythonProject5\NewsPaper\news\views.py changed, reloading. 2023-01-10 12:08:05,378
+INFO Watching for file changes with StatReloader 2023-01-10 12:08:06,213
+INFO "GET /news/ HTTP/1.1" 200 6192 2023-01-10 12:08:06,549
+INFO E:\Python\pythonProject5\NewsPaper\news\views.py changed, reloading. 2023-01-10 12:08:18,263
+INFO Watching for file changes with StatReloader 2023-01-10 12:08:19,003
+INFO "GET /news/ HTTP/1.1" 200 6192 2023-01-10 12:08:20,511
+ERROR Internal Server Error: /news/ 2023-01-10 12:08:36,250
+Traceback (most recent call last):
+  File "E:\Python\pythonProject5\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Python\pythonProject5\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Python\pythonProject5\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\Python\pythonProject5\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Python\pythonProject5\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\Python\pythonProject5\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\Python\pythonProject5\newspaper\news\views.py", line 33, in get_context_data
+    context = super().get_context_data(**kwargs)
+AttributeError: 'super' object has no attribute 'gett_context_data'
+ERROR "GET /news/ HTTP/1.1" 500 87358 2023-01-10 12:08:36,251
+INFO E:\Python\pythonProject5\NewsPaper\news\views.py changed, reloading. 2023-01-10 12:08:36,542
+INFO Watching for file changes with StatReloader 2023-01-10 12:08:37,329
+INFO E:\Python\pythonProject5\NewsPaper\news\views.py changed, reloading. 2023-01-10 12:08:44,137
+INFO Watching for file changes with StatReloader 2023-01-10 12:08:44,972
+INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading. 2023-01-10 12:10:39,643
+INFO Watching for file changes with StatReloader 2023-01-10 12:10:40,389
+INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading. 2023-01-10 12:11:32,247
+INFO Watching for file changes with StatReloader 2023-01-10 12:11:33,026
+INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading. 2023-01-10 12:11:57,587
+INFO Watching for file changes with StatReloader 2023-01-10 12:11:58,287
+INFO "GET /news/ HTTP/1.1" 200 6192 2023-01-10 12:12:01,359
+INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading. 2023-01-10 12:12:12,565
+INFO Watching for file changes with StatReloader 2023-01-10 12:12:13,264
+INFO E:\Python\pythonProject5\NewsPaper\NewsPaper\settings.py changed, reloading. 2023-01-10 12:15:24,969
